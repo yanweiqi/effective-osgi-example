@@ -1,9 +1,9 @@
 ### IntelliJ IDEA ###
+.idea
 *.iws
 *.iml
 *.ipr
-target
-.idea
+
 
 ### STS ###
 .apt_generated
@@ -14,6 +14,8 @@ target
 .springBeans
 
 ### other ###
+*.class
+*.jar
 bundles
 felix-framework-6.0.1
-.idea
+target
