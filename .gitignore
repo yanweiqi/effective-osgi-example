@@ -1,0 +1,19 @@
+### IntelliJ IDEA ###
+*.iws
+*.iml
+*.ipr
+target
+.idea
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### other ###
+bundles
+felix-framework-6.0.1
+.idea
