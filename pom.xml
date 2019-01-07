@@ -37,7 +37,9 @@
     </dependencies>
 
     <modules>
+        <!--该案例是一个完整的小demo，涉及API的导出，Server的注册和Client的服务查找，Main用于启动项目-->
         <module>effective-osgi-chapter01</module>
+        <module>effective-osgi-chapter02</module>
     </modules>
 
 </project>
