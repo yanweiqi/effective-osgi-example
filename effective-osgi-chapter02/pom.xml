@@ -4,9 +4,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>com.effective.osgi</groupId>
+        <artifactId>effective-osgi-example</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
     <groupId>com.effective.osgi</groupId>
     <artifactId>effective-osgi-chapter02</artifactId>
     <version>1.0.0</version>
+    <packaging>pom</packaging>
 
-    
+    <modules>
+        <module>effective-osgi-chapter02-api</module>
+        <module>effective-osgi-chapter02-server163</module>
+        <module>effective-osgi-chapter02-server139</module>
+        <module>effective-osgi-chapter02-client</module>
+        <module>effective-osgi-chapter02-main</module>
+    </modules>
 </project>
