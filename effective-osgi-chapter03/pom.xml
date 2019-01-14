@@ -11,16 +11,15 @@
     </parent>
 
     <groupId>com.effective.osgi</groupId>
-    <artifactId>effective-osgi-chapter02</artifactId>
+    <artifactId>effective-osgi-chapter03</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>effective-osgi-chapter02-api</module>
-        <module>effective-osgi-chapter02-server163</module>
-        <module>effective-osgi-chapter02-server139</module>
-        <module>effective-osgi-chapter02-client</module>
-        <module>effective-osgi-chapter02-main</module>
-        <module>effective-osgi-chapter02-listener</module>
+        <module>effective-osgi-chapter03-http-api</module>
+        <module>effective-osgi-chapter03-http-server</module>
+        <module>effective-osgi-chapter03-http-web01</module>
+        <module>effective-osgi-chapter03-http-main</module>
     </modules>
+    
 </project>

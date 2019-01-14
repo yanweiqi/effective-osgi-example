@@ -8,6 +8,7 @@ import org.osgi.framework.Constants;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
     static Felix felix;
@@ -18,6 +19,7 @@ public class Main {
         Bundle server163 = null;
         Bundle server139 = null;
         Bundle client = null;
+        Bundle listener = null;
         try {
 
             final Map configMap = new HashMap();
@@ -31,13 +33,18 @@ public class Main {
             server163 = context.installBundle("file:effective-server-163.jar");
             server139 = context.installBundle("file:effective-server-139.jar");
             client = context.installBundle("file:effective-mail-client.jar");
+            listener = context.installBundle("file:effective-listener.jar");
 
             felix.start();
 
+            listener.start();
             api.start();
             server163.start();
             server139.start();
             client.start();
+
+            TimeUnit.SECONDS.sleep(10);
+
         } catch (Exception ex) {
             System.err.println("Error starting program: " + ex);
             ex.printStackTrace();
@@ -48,7 +55,9 @@ public class Main {
                 server163.stop();
                 server139.stop();
                 client.stop();
+                listener.stop();
                 felix.stop();
+                System.out.println("osgi server close.");
             } catch (BundleException e) {
                 e.printStackTrace();
             }
