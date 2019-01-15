@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="component.client" immediate="true" xmlns="http://www.osgi.org/xmlns/scr/v1.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		   xsi:schemaLocation="http://www.osgi.org/xmlns/scr/v1.2.0 https://osgi.org/xmlns/scr/v1.2.0/scr.xsd">
+	
+	<implementation class="com.effective.osgi.ds.client.MyClient" />
+	
+	<reference interface="java.lang.Runnable" bind="bind" unbind="unbind"/>
+	
+</component>

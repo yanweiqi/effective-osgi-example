@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.effective.osgi</groupId>
+        <artifactId>effective-osgi-chapter04</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <groupId>com.effective.osgi</groupId>
+    <artifactId>effective-osgi-chapter04-hook-core</artifactId>
+    <version>1.0.0</version>
+
+    <build>
+        <finalName>effective-hook-core</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.1</version>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <Bundle-ManifestVersion>2</Bundle-ManifestVersion>
+                            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                            <Bundle-Version>1.0.0</Bundle-Version>
+                            <Import-Package>org.osgi.framework,org.osgi.framework.hooks.service</Import-Package>
+                            <Bundle-Activator>com.effective.osgi.hook.core.register.Activator</Bundle-Activator>
+                        </manifestEntries>
+                    </archive>
+                    <outputDirectory>../bundles/</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+</project>

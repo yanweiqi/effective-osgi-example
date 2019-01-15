@@ -41,6 +41,8 @@
         <module>effective-osgi-chapter01</module>
         <module>effective-osgi-chapter02</module>
         <module>effective-osgi-chapter03</module>
+        <module>effective-osgi-chapter04</module>
+        <module>effective-osgi-chapter05</module>
     </modules>
 
 </project>
