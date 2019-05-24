@@ -19,15 +19,18 @@ import org.osgi.framework.ServiceReference;
  * 2.bundleContext.getServiceReferences(String clazz, String filter)
  * 3.第二个参数接受标准的LDAP过滤字符串，这一节在chapter的实例中讲解，这里只是抛砖引玉
  *
+ * @author yanweiqi
  */
 public class Client implements BundleActivator {
 
+    @Override
     public void start(BundleContext ctx) {
         ServiceReference ref = ctx.getServiceReference(Greeting.class.getName());
 
         ((Greeting) ctx.getService(ref)).sayHello();
     }
 
+    @Override
     public void stop(BundleContext ctx) {
     }
 }

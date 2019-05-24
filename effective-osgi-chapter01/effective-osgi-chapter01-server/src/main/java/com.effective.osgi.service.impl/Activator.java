@@ -7,6 +7,7 @@ import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator {
 
+    @Override
     public void start(BundleContext ctx) {
         System.out.println("注册实现类GreetingImpl");
 
@@ -19,6 +20,7 @@ public class Activator implements BundleActivator {
         ctx.registerService(Greeting.class.getName(), new GreetingImpl("yanweiqi"), null);
     }
 
+    @Override
     public void stop(BundleContext ctx) {
     }
 }
